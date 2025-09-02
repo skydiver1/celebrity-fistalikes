@@ -12,17 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             
-            if (this.disabled) {
-                showModal();
-                return;
-            }
-
-            // Future functionality for enabled buttons
-            const productCard = this.closest('.product-card');
-            const productName = productCard.querySelector('h3').textContent;
-            
-            addToCart(productName);
-            showNotification('Added to Cart!', `${productName} fist replica added to your cart.`, 'success');
+            // Always show the humorous modal
+            showModal();
         });
     });
 
