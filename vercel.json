@@ -1,0 +1,7 @@
+{
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "devCommand": "npx serve . -l 3000",
+  "installCommand": "",
+  "framework": null
+}
