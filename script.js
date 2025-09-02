@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h2>Thank you for your purchase</h2>
                 <p>Can we add the Hole Wrecker 9000 to your basket?</p>
                 <p>For the small sum of £49.95</p>
-                <button class="modal-close">Close</button>
+                <button class="modal-close">Yes! I want my hole wrecked!</button>
             </div>
         `;
 
