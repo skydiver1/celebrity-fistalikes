@@ -38,18 +38,9 @@ body {
 }
 
 .logo h1 {
-    background: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #00ff00, #0080ff, #0000ff, #8000ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #e74c3c;
     font-size: 1.5rem;
     font-weight: 700;
-    animation: rainbow-text 4s linear infinite;
-}
-
-@keyframes rainbow-text {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 200% 50%; }
 }
 
 .logo i {
@@ -107,32 +98,6 @@ body {
     padding: 8rem 2rem 4rem;
     text-align: center;
     margin-top: 70px;
-    position: relative;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: linear-gradient(90deg, 
-        #ff0000 0%, 
-        #ff8000 14.28%, 
-        #ffff00 28.57%, 
-        #00ff00 42.86%, 
-        #0080ff 57.14%, 
-        #0000ff 71.43%, 
-        #8000ff 85.71%, 
-        #ff0000 100%);
-    animation: rainbow-slide 3s linear infinite;
-}
-
-@keyframes rainbow-slide {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 200% 50%; }
-}
 }
 
 .hero-content h2 {
@@ -199,18 +164,8 @@ body {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    background: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #00ff00, #0080ff, #0000ff, #8000ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    background-size: 300% 300%;
+    color: #2c3e50;
     font-weight: 700;
-    animation: rainbow-section-title 5s ease-in-out infinite;
-}
-
-@keyframes rainbow-section-title {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
 }
 
 .product-grid {
@@ -226,26 +181,7 @@ body {
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
-    border: 3px solid #e74c3c;
-    position: relative;
-}
-
-.product-card::before {
-    content: '';
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    background: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #00ff00, #0080ff, #0000ff, #8000ff);
-    border-radius: 18px;
-    z-index: -1;
-    animation: rainbow-card-border 4s linear infinite;
-}
-
-@keyframes rainbow-card-border {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 200% 50%; }
+    border: 1px solid #eee;
 }
 
 .product-card:hover {
@@ -341,8 +277,7 @@ body {
 
 .buy-button {
     width: 100%;
-    background: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #00ff00, #0080ff, #0000ff, #8000ff);
-    background-size: 200% 200%;
+    background: #e74c3c;
     color: white;
     border: none;
     padding: 0.8rem;
@@ -355,19 +290,12 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    animation: rainbow-button 3s ease-in-out infinite;
-}
-
-@keyframes rainbow-button {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
 }
 
 .buy-button:disabled {
-    background: #bdc3c7 !important;
+    background: #bdc3c7;
     cursor: not-allowed;
     opacity: 0.7;
-    animation: none;
 }
 
 .buy-button:not(:disabled):hover {
@@ -532,15 +460,8 @@ body {
 }
 
 .social-links a:hover {
-    background: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #00ff00, #0080ff, #0000ff, #8000ff);
-    background-size: 200% 200%;
-    animation: rainbow-social 2s linear infinite;
+    background: #e74c3c;
     transform: translateY(-2px);
-}
-
-@keyframes rainbow-social {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 200% 50%; }
 }
 
 .footer-bottom {
