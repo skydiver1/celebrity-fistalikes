@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             
             if (this.disabled) {
-                showNotification('Coming Soon!', 'This product will be available soon. Sign up for notifications!', 'info');
+                showModal();
                 return;
             }
 
@@ -87,6 +87,125 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             cartCountElement.style.display = 'flex';
         }
+    }
+
+    // Modal system
+    function showModal() {
+        // Remove any existing modal
+        const existingModal = document.querySelector('.modal');
+        if (existingModal) {
+            existingModal.remove();
+        }
+
+        // Create modal element
+        const modal = document.createElement('div');
+        modal.className = 'modal';
+        modal.innerHTML = `
+            <div class="modal-backdrop"></div>
+            <div class="modal-content">
+                <h2>Ha Ha Ha... really?</h2>
+                <p>Did you seriously think you could buy a celebrity's fist? 😂</p>
+                <p>This is just a parody website for fun!</p>
+                <button class="modal-close">Close</button>
+            </div>
+        `;
+
+        // Add styles
+        modal.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        `;
+
+        // Style backdrop
+        const backdrop = modal.querySelector('.modal-backdrop');
+        backdrop.style.cssText = `
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+        `;
+
+        // Style content
+        const content = modal.querySelector('.modal-content');
+        content.style.cssText = `
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 400px;
+            margin: 0 20px;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+            position: relative;
+        `;
+
+        // Style close button
+        const closeButton = modal.querySelector('.modal-close');
+        closeButton.style.cssText = `
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: background 0.3s ease;
+        `;
+
+        // Add modal to page
+        document.body.appendChild(modal);
+
+        // Animate in
+        setTimeout(() => {
+            modal.style.opacity = '1';
+            content.style.transform = 'scale(1)';
+        }, 10);
+
+        // Add close functionality
+        closeButton.addEventListener('click', () => closeModal(modal));
+        backdrop.addEventListener('click', () => closeModal(modal));
+
+        // Close on Escape key
+        const escapeHandler = (e) => {
+            if (e.key === 'Escape') {
+                closeModal(modal);
+                document.removeEventListener('keydown', escapeHandler);
+            }
+        };
+        document.addEventListener('keydown', escapeHandler);
+
+        // Close button hover effect
+        closeButton.addEventListener('mouseenter', () => {
+            closeButton.style.background = '#c0392b';
+        });
+        closeButton.addEventListener('mouseleave', () => {
+            closeButton.style.background = '#e74c3c';
+        });
+    }
+
+    function closeModal(modal) {
+        modal.style.opacity = '0';
+        modal.querySelector('.modal-content').style.transform = 'scale(0.8)';
+        setTimeout(() => {
+            if (modal.parentNode) {
+                modal.remove();
+            }
+        }, 300);
     }
 
     // Notification system
