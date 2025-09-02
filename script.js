@@ -153,15 +153,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300);
     }
 
-    // Add loading animation for images
+    // Ensure images are visible
     const images = document.querySelectorAll('.product-image img');
     images.forEach(img => {
-        img.addEventListener('load', function() {
-            this.style.opacity = '1';
-        });
-        
-        img.style.opacity = '0';
-        img.style.transition = 'opacity 0.3s ease';
+        img.style.opacity = '1';
     });
 
     // Newsletter signup (placeholder)
