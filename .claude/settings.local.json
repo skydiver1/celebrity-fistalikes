@@ -6,7 +6,20 @@
       "Bash(git commit:*)",
       "Bash(gh auth:*)",
       "Bash(gh repo create:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "WebSearch",
+      "WebSearch",
+      "WebSearch",
+      "WebSearch",
+      "WebSearch",
+      "WebSearch",
+      "Bash(npm run dev:*)",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "WebFetch(domain:www.flickr.com)"
     ],
     "deny": [],
     "ask": []
