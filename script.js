@@ -94,9 +94,9 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.innerHTML = `
             <div class="modal-backdrop"></div>
             <div class="modal-content">
-                <h2>Ha Ha Ha... really?</h2>
-                <p>Did you seriously think you could buy a celebrity's fist for bum fun? 😂</p>
-                <p>This is just a parody website by Oliver!</p>
+                <h2>Thank you for your purchase</h2>
+                <p>Can we add the Hole Wrecker 9000 to your basket?</p>
+                <p>For the small sum of £49.95</p>
                 <button class="modal-close">Close</button>
             </div>
         `;
