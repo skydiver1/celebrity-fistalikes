@@ -95,8 +95,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="modal-backdrop"></div>
             <div class="modal-content">
                 <h2>Ha Ha Ha... really?</h2>
-                <p>Did you seriously think you could buy a celebrity's fist? 😂</p>
-                <p>This is just a parody website for fun!</p>
+                <p>Did you seriously think you could buy a celebrity's fist for bum fun? 😂</p>
+                <p>This is just a parody website by Oliver!</p>
                 <button class="modal-close">Close</button>
             </div>
         `;
