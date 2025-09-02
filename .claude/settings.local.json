@@ -19,7 +19,8 @@
       "WebFetch(domain:commons.wikimedia.org)",
       "WebFetch(domain:commons.wikimedia.org)",
       "WebFetch(domain:commons.wikimedia.org)",
-      "WebFetch(domain:www.flickr.com)"
+      "WebFetch(domain:www.flickr.com)",
+      "WebFetch(domain:upload.wikimedia.org)"
     ],
     "deny": [],
     "ask": []
