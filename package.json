@@ -1,17 +1,33 @@
 {
-  "name": "celebrity-fistalikes",
+  "name": "nextjs-store",
   "version": "1.0.0",
-  "description": "Ecommerce website for celebrity fist replicas",
-  "main": "index.html",
+  "private": true,
   "scripts": {
-    "dev": "npx serve . -l 3000",
-    "start": "npx serve . -l 3000",
-    "build": "echo 'Static site - no build needed'"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "keywords": ["ecommerce", "website", "celebrities"],
-  "author": "Celebrity Fistalikes",
-  "license": "ISC",
+  "dependencies": {
+    "@stripe/react-stripe-js": "^4.0.2",
+    "@stripe/stripe-js": "^7.9.0",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/postcss": "^4.1.13",
+    "@types/node": "^24.3.1",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "autoprefixer": "^10.4.21",
+    "next": "^15.5.3",
+    "postcss": "^8.5.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "stripe": "^18.5.0",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.9.2",
+    "zustand": "^5.0.8"
+  },
   "devDependencies": {
-    "serve": "^14.2.1"
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15.5.3"
   }
 }

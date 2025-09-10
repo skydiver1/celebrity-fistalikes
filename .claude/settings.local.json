@@ -21,9 +21,24 @@
       "WebFetch(domain:commons.wikimedia.org)",
       "WebFetch(domain:www.flickr.com)",
       "WebFetch(domain:upload.wikimedia.org)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(npx create-next-app:*)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm run dev:*)",
+      "Bash(git init:*)",
+      "Bash(npx vercel:*)",
+      "Bash(git reset:*)"
     ],
     "deny": [],
-    "ask": []
+    "ask": [],
+    "additionalDirectories": [
+      "C:\\VS MedTech Sites"
+    ]
   }
 }

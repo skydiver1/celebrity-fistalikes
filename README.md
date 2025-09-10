@@ -1,74 +1,98 @@
-# Celebrity Fistalikes
+# Celebrity Fistalikes E-commerce Store
 
-An ecommerce website selling authentic celebrity fist replicas created from genuine celebrity impressions.
+A modern Next.js e-commerce application with Stripe integration for selling celebrity fist replicas.
 
 ## Features
 
-- **Product Showcase**: Browse our collection of celebrity fist replicas
-- **Responsive Design**: Mobile-friendly layout that works on all devices
-- **Interactive Elements**: Hover effects, smooth scrolling, and notifications
-- **Shopping Cart**: Add items to cart (currently disabled for demo)
-- **Modern UI**: Clean, professional design with gradient backgrounds
+- 🛍️ Full e-commerce functionality
+- 💳 Stripe Elements for secure payments
+- 🛒 Persistent shopping cart with Zustand
+- 📱 Fully responsive design
+- 🎨 Beautiful UI with Tailwind CSS
+- 🚀 Fast performance with Next.js 14
+- 🔒 Secure checkout process
+- 📦 Order management through Stripe Dashboard
 
-## Celebrity Collection
+## Setup Instructions
 
-Our current collection features fist replicas from:
+### 1. Install Dependencies
 
-- **Joe Swash** - TV presenter and actor
-- **Kerry Katona** - Former Atomic Kitten member
-- **Gemma Collins** - TOWIE star
-- **Danny Dyer** - EastEnders actor
-- **Katie Price** - Media personality
-- **Rylan Clark** - TV presenter
-
-## Technical Details
-
-- **HTML5**: Semantic markup with accessibility features
-- **CSS3**: Modern styling with Flexbox/Grid, animations, and responsive design
-- **JavaScript**: Interactive features and user experience enhancements
-- **Google Fonts**: Inter font family for clean typography
-- **Font Awesome**: Icons for enhanced visual appeal
-
-## File Structure
-
-```
-fistalikes/
-├── index.html          # Main homepage
-├── styles.css          # CSS styling
-├── script.js           # JavaScript functionality
-├── .gitignore          # Git ignore file
-└── README.md           # Project documentation
+```bash
+npm install
 ```
 
-## Getting Started
+### 2. Configure Stripe
 
-1. Clone or download the repository
-2. Open `index.html` in your web browser
-3. Browse the celebrity fist collection
-4. Interact with the buy buttons (currently disabled for demo)
+1. Create a Stripe account at https://stripe.com
+2. Get your API keys from https://dashboard.stripe.com/apikeys
+3. Create a `.env.local` file in the root directory:
 
-## Development
+```env
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_your_key_here
+STRIPE_SECRET_KEY=sk_test_your_key_here
+```
 
-To modify the website:
+### 3. Run Development Server
 
-1. Edit `index.html` for structure changes
-2. Modify `styles.css` for styling updates
-3. Update `script.js` for functionality changes
+```bash
+npm run dev
+```
 
-## Browser Support
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-- Chrome 70+
-- Firefox 60+
-- Safari 12+
-- Edge 79+
+## Testing Payments
+
+Use Stripe's test card numbers:
+- **Success**: 4242 4242 4242 4242
+- **Decline**: 4000 0000 0000 0002
+- **3D Secure**: 4000 0025 0000 3155
+
+Use any future expiry date and any 3-digit CVC.
+
+## Project Structure
+
+```
+nextjs-store/
+├── app/                    # Next.js app directory
+│   ├── api/               # API routes
+│   ├── checkout/          # Checkout page
+│   ├── products/          # Product pages
+│   └── success/           # Order success page
+├── components/            # React components
+├── data/                  # Static product data
+├── lib/                   # Utilities and configuration
+├── public/                # Static assets (images)
+└── types/                 # TypeScript types
+```
+
+## Deployment
+
+### Deploy to Vercel
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Add environment variables in Vercel dashboard
+4. Deploy!
+
+## Order Management
+
+All orders appear in your Stripe Dashboard with complete customer and order information:
+- Customer details (name, email, address)
+- Items purchased
+- Payment amount
+- Order metadata
+
+Access your orders at: https://dashboard.stripe.com/payments
+
+## Technologies Used
+
+- **Next.js 14** - React framework
+- **TypeScript** - Type safety
+- **Stripe** - Payment processing
+- **Zustand** - State management
+- **Tailwind CSS** - Styling
+- **React Hook Form** - Form handling
 
 ## License
 
-This project is for demonstration purposes only.
-
-## Contact
-
-For inquiries about Celebrity Fistalikes:
-- Email: info@celebrityfistalikes.com
-- Phone: +44 20 1234 5678
-- Location: London, UK
+MIT
