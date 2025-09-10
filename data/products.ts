@@ -5,7 +5,7 @@ export const products: Product[] = [
     id: 'joe-swash',
     name: 'Joe Swash Signature Fist',
     price: 299.95,
-    image: '/joe.jpeg',
+    image: '/danny.jpg', // Temporarily using Danny's image as placeholder for better quality
     description: 'Experience the authentic power of Joe Swash with this premium replica fist. Perfect for fans who want to bring home a piece of celebrity history.',
     features: [
       '100% authentic celebrity impression',
