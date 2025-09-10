@@ -1,13 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2025-08-27.basil',
-})
+const stripe = process.env.STRIPE_SECRET_KEY 
+  ? new Stripe(process.env.STRIPE_SECRET_KEY, {
+      apiVersion: '2025-08-27.basil',
+    })
+  : null
 
 const SHIPPING_COST = 9.95 // Fixed shipping cost
 
 export async function POST(request: NextRequest) {
+  if (!stripe) {
+    return NextResponse.json(
+      { error: 'Stripe not configured. Please add STRIPE_SECRET_KEY environment variable.' },
+      { status: 500 }
+    )
+  }
+
   try {
     const { items, customer } = await request.json()
 
