@@ -47,4 +47,15 @@
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent;
   }
+
+  /* Image optimization utilities */
+  .image-crisp {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  .image-smooth {
+    image-rendering: auto;
+    image-rendering: smooth;
+  }
 }

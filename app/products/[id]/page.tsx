@@ -42,12 +42,17 @@ export default function ProductDetailPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Product Image */}
-        <div className="relative h-96 lg:h-[600px] rounded-xl overflow-hidden">
+        <div className="relative h-96 lg:h-[600px] rounded-xl overflow-hidden bg-gray-100">
           <Image
             src={product.image}
             alt={product.name}
             fill
             className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            priority={true}
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLU4GKAsuupv8AZZHy8x5QBB7cDGeO2/q1xUSVkEySuoTc3lQxeznJLkIlSCRfH1x/FwciH2qOSqFl8s1KNgyGN/Xsx/aBfzJAFz3weLlM/k5+9WX7qkRGkV0yOjVPnYGCUKqoJk1H0z9w="
+            quality={85}
           />
         </div>
 
