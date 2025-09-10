@@ -1,6 +1,10 @@
 # Celebrity Fistalikes E-commerce Store
 
-A modern Next.js e-commerce application with Stripe integration for selling celebrity fist replicas.
+A modern Next.js 14 e-commerce application with Stripe integration for selling celebrity fist replicas.
+
+## Framework
+
+This is a Next.js application using the App Router.
 
 ## Features
 
